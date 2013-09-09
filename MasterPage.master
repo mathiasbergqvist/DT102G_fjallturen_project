@@ -1,0 +1,78 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Fjällturen AB</title>
+</head>
+<body topmargin="0">
+    <form id="form1" runat="server">
+    <div>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+            <tr>
+                <td bgcolor="#cfe1ff" style="width: 101px; height: 131px" valign="top">
+                    <asp:Image ID="Image1" runat="server" Height="220px" ImageAlign="Right" ImageUrl="~/Bilder/bakgrund_top_vänster.png" /></td>
+                <td height="220" valign="top">
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Bilder/site_header.jpg" PostBackUrl="~/Default.aspx" /></td>
+                    <td align="right" valign="top">
+                    <asp:Panel ID="LinksPanel" Runat="server" HorizontalAlign="Right">
+                        <asp:HyperLink ID="AdminLink" Text="Admin" NavigateUrl="~/Secure/Admin.aspx" Runat="server" ForeColor="#990A0A" Font-Names="Verdana" Font-Size="12pt" EnableTheming="False" Style="text-decoration: none" Font-Bold="True" />
+                        <span style="font-size: 12pt; color: #990a0a; fontfamily:Verdana"><strong>|</strong></span>
+                        <asp:LoginStatus ID="LoginStatusControl" Runat="server" ForeColor="#990a0a" Font-Names="Verdana" Font-Size="12pt" EnableTheming="False" Style="text-decoration: none" Font-Bold="True" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" LoginText="Logga in" LogoutText="Logga ut" />
+                        &nbsp; <span style="font-size: 12pt; color: #990a0a; fontfamily:Verdana">
+                            &nbsp;
+                        </span>
+                    </asp:Panel>
+                        &nbsp;
+                </td>
+                <td bgcolor="#cfe1ff" style="height: 131px" width="100" valign="top">
+                    <asp:Image ID="Image2" runat="server" Height="220px" ImageUrl="~/Bilder/bakgrund_top_höger.png" /></td>
+            </tr>
+        </table>
+    </div>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+            <tr>
+                <td bgcolor="#cfe1ff" width="100" style="height: 552px" valign="top">
+                    <asp:Image ID="Image4" runat="server" ImageAlign="Right" ImageUrl="~/Bilder/bakgrund_vänster_lång.png" Height="1100px" Width="101px" /></td>
+                <td valign="top">
+                    <table style="width: 100%">
+                        <tr>
+                            <td bgcolor="#cfe1ff" rowspan="" style="width: 100px; height: 25px">
+                                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" EnableTheming="False"
+                                    Font-Names="Verdana" Font-Size="14pt" ForeColor="#990A0A" Orientation="Horizontal">
+                                    <StaticMenuItemStyle ItemSpacing="10px" />
+                                    <StaticHoverStyle BorderStyle="None" Font-Overline="False" Font-Underline="True" />
+                                </asp:Menu>
+                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" SiteMapProvider="DefaultSiteMapProvider" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#80afff" rowspan="" style="width: 100px; height: 25px;">
+                                &nbsp; &nbsp;&nbsp;&nbsp;
+                                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana">
+                                </asp:SiteMapPath>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" ShowStartingNode="False" />
+                </td>
+                <td bgcolor="#cfe1ff" valign="top" width="100">
+                    <asp:Image ID="Image3" runat="server" ImageAlign="Left" ImageUrl="~/Bilder/bakgrund_höger_lång.png" Height="1100px" Width="101px" /></td>
+            </tr>
+            <tr>
+                <td bgcolor="#cfe1ff" style="height: 37px" width="100">
+                    <asp:Image ID="Image5" runat="server" ImageAlign="Right" ImageUrl="~/Bilder/bakgrund_botten_vänster.png" /></td>
+                <td style="height: 37px; background-color: #ffffff;" valign="top">
+                    <hr />
+                    <span style="font-size: 8pt; color: darkgray; font-family: Verdana">Fjällturen AB | Design av Mathias
+                        Bergqvist</span></td>
+                <td bgcolor="#cfe1ff" style="width: 80px; height: 37px; background-color: #ffffff;" valign="top">
+                    <asp:Image ID="Image6" runat="server" ImageAlign="Left" ImageUrl="~/Bilder/bakgrund_botten_höger.png" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Default.aspx" title="Hem" >
+      <siteMapNode url="Fjällstuga.aspx" title="Fjällstugor" />
+        <siteMapNode url="Snöskoter.aspx" title="Hyr snöskoter" />
+        <siteMapNode url="Skidutrustning.aspx" title="Hyr skidutrustning" />
+        <siteMapNode url="Secure/Admin.aspx" title="Admin" roles="Administratorer" />
+    </siteMapNode>
+</siteMap>
